@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Manual Voice</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .search-input {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-color: #f5f5f5;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      outline: none;
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+
+    .search-input:focus {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin-top: 30px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .song {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .song img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .song-title {
+      font-weight: bold;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search for a song..." class="search-input">
+  </div>
+  <div class="grid-container">
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 1">
+      <div class="song-title">Introduce</div>
+      <div class="button-container">
+        <audio id="audio1">
+          <source src="song1.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio1')">Play</button>
+        <button class="button" onclick="pauseAudio('audio1')">Pause</button>
+        <button class="button" onclick="stopAudio('audio1')">Stop</button>
+      </div>
+    </div>
+
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 2">
+      <div class="song-title">Great, Left Details</div>
+      <div class="button-container">
+        <audio id="audio2">
+          <source src="song2.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio2')">Play</button>
+        <button class="button" onclick="pauseAudio('audio2')">Pause</button>
+	<button class="button" onclick="stopAudio('audio2')">Stop</button>
+      </div>
+    </div>
+
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 3">
+      <div class="song-title">Did you know about AI?</div>
+      <div class="button-container">
+        <audio id="audio3">
+          <source src="song3.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio3')">Play</button>
+        <button class="button" onclick="pauseAudio('audio3')">Pause</button>
+	<button class="button" onclick="stopAudio('audio3')">Stop</button>
+      </div>
+    </div>
+
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 4">
+      <div class="song-title">Describe 1</div>
+      <div class="button-container">
+        <audio id="audio4">
+          <source src="song4.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio4')">Play</button>
+        <button class="button" onclick="pauseAudio('audio4')">Pause</button>
+	<button class="button" onclick="stopAudio('audio4')">Stop</button>
+      </div>
+    </div>
+
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 5">
+      <div class="song-title">Describe 2</div>
+      <div class="button-container">
+        <audio id="audio5">
+          <source src="song5.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio5')">Play</button>
+        <button class="button" onclick="pauseAudio('audio5')">Pause</button>
+	<button class="button" onclick="stopAudio('audio5')">Stop</button>
+      </div>
+    </div>
+
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 6">
+      <div class="song-title">Describe 3</div>
+      <div class="button-container">
+        <audio id="audio6">
+          <source src="song6.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio6')">Play</button>
+        <button class="button" onclick="pauseAudio('audio6')">Pause</button>
+	<button class="button" onclick="stopAudio('audio6')">Stop</button>
+      </div>
+    </div>
+
+    <div class="song">
+      <img src="pic1.jpg" alt="Song 7">
+      <div class="song-title">Great!</div>
+      <div class="button-container">
+        <audio id="audio7">
+          <source src="song7.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio7')">Play</button>
+        <button class="button" onclick="pauseAudio('audio7')">Pause</button>
+	<button class="button" onclick="stopAudio('audio7')">Stop</button>
+      </div>
+    </div>
+
+   <div class="song">
+      <img src="pic1.jpg" alt="Song 8">
+      <div class="song-title">I'm sorry?</div>
+      <div class="button-container">
+        <audio id="audio8">
+          <source src="song8.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio8')">Play</button>
+        <button class="button" onclick="pauseAudio('audio8')">Pause</button>
+	<button class="button" onclick="stopAudio('audio8')">Stop</button>
+      </div>
+    </div>
+
+   <div class="song">
+      <img src="pic1.jpg" alt="Song 9">
+      <div class="song-title">No prob, Have a nice day</div>
+      <div class="button-container">
+        <audio id="audio9">
+          <source src="song9.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio9')">Play</button>
+        <button class="button" onclick="pauseAudio('audio9')">Pause</button>
+	<button class="button" onclick="stopAudio('audio9')">Stop</button>
+      </div>
+    </div>
+
+   <div class="song">
+      <img src="pic1.jpg" alt="Song 10">
+      <div class="song-title">Sure!</div>
+      <div class="button-container">
+        <audio id="audio10">
+          <source src="song10.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio10')">Play</button>
+        <button class="button" onclick="pauseAudio('audio10')">Pause</button>
+	<button class="button" onclick="stopAudio('audio10')">Stop</button>
+      </div>
+    </div>
+
+   <div class="song">
+      <img src="pic1.jpg" alt="Song 11">
+      <div class="song-title">N/A</div>
+      <div class="button-container">
+        <audio id="audio11">
+          <source src="song11.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio11')">Play</button>
+        <button class="button" onclick="pauseAudio('audio11')">Pause</button>
+	<button class="button" onclick="stopAudio('audio11')">Stop</button>
+      </div>
+    </div>
+
+<div class="song">
+      <img src="pic1.jpg" alt="Song 12">
+      <div class="song-title">N/A</div>
+      <div class="button-container">
+        <audio id="audio12">
+          <source src="song12.mp3" type="audio/mpeg">
+        </audio>
+        <button class="button" onclick="playAudio('audio12')">Play</button>
+        <button class="button" onclick="pauseAudio('audio12')">Pause</button>
+	<button class="button" onclick="stopAudio('audio12')">Stop</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      function playAudio(id) {
+        var audio = document.getElementById(id);
+        audio.play();
+      }
+
+      function pauseAudio(id) {
+        var audio = document.getElementById(id);
+        audio.pause();
+      }
+
+      function stopAudio(id) {
+        var audio = document.getElementById(id);
+        audio.pause();
+        audio.currentTime = 0;
+      }
+
+      var searchInput = document.getElementById('search-input');
+      searchInput.addEventListener('input', function() {
+        var searchText = this.value.toLowerCase();
+        var songs = document.getElementsByClassName('song');
+        for (var i = 0; i < songs.length; i++) {
+          var songTitle = songs[i].getElementsByClassName('song-title')[0].innerText.toLowerCase();
+          if (songTitle.includes(searchText)) {
+            songs[i].style.display = 'block';
+          } else {
+            songs[i].style.display = 'none';
+          }
+        }
+      });
+  </script>
+</body>
+</html>
